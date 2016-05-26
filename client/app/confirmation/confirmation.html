@@ -1,0 +1,62 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <div class="wrapper">
+      <div class="page-box">
+        <section class="strip-container">
+          <div class="profile-header blue responsive transition">
+            <div class="gradient-animate-layer hidden"></div>
+            <div class="snow-container"></div>
+            <div class="profile-header-content">
+              <div class="profile-image-container">
+                <div class="profile-header-img current-profile-img" style="background-image: url(../assets/images/marco.jpg);"></div>
+              </div>
+             
+          </div>
+        </section>
+        <section class="content-container" style="height: auto;">
+          <div class="profile-page content-delayed-fade-in">
+            <form class="profile-amount-form">
+              <div class="profile-recipient-container">
+                <div class="recipient-label">You are sending to Marco.</div>
+              </div>
+              <div class="profile-amount-input-container">
+                <div class="money-input">
+                  <div class="amount-container" dir="ltr" style="font-size: 60px;">
+                    <div class="amount-number" data-ng-model="bitcoin"  data-ng-change="updateData()">{{bitcoin | currency:"":3}}</div><span class="amount-currency padding-currency">BTC</span>
+                  </div>
+                </div>
+              </div>
+              <div class="profile-recipient-container">
+                <div class="recipient-label">Conversion rate: {{bitcoinValue}}AUD to 1BTC</div>
+              </div>
+              <div class="preview-fundingOptions-wrapper grow-wrapper growDown">
+              	<div class="selectedFundingOption">
+              		<div class="selectedFundingOption-details row">
+              			<div class="preview-yourePayingWith toggleFISidepanel row">
+              				<div class="col-xs-11 txtBold">You're sending with</div>
+            				</div>
+            				<div class="card-row row">
+            					<span class="col-xs-8 selectedFundingOption-displayName">MasterCard x-6826</span>
+            					<span class="col-xs-4 txtRight" data-ng-model="ammount" data-ng-change="updateData()">{{ammount | currency}}</span>
+          					</div>
+        					</div>
+        					<div class="selectedFundingOption-fees row">
+                    <div class="col-xs-6 txtBold">Fee</div>
+                    <div class="col-xs-6 txtRight test_payer-fee">{{fee | currency}}</div>
+                  </div>
+                  <div class="selectedFundingOption-senderPay row senderPay">
+                    <span class="col-xs-7">You'll pay</span>
+                    <span class="totalAmount col-xs-5 txtRight">{{total | currency}}</span>
+                  </div>
+                </div>
+              </div>
+              <input type="submit" class="profile-amount-submit-button pwc-button" value="Send Bitcoin" ng-click="sendMoney()">
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>

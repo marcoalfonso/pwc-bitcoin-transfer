@@ -1,0 +1,57 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <div class="wrapper">
+      <div class="page-box">
+        <section class="strip-container">
+          <div class="profile-header blue responsive transition">
+            <div class="gradient-animate-layer hidden"></div>
+            <div class="snow-container"></div>
+            <div class="profile-header-content">
+              <div class="profile-image-container">
+                <div class="profile-header-img current-profile-img" style="background-image: url(../assets/images/marco.jpg);"></div>
+              </div>
+              <div class="profile-header-subtitle">
+                <div class="profile-header-name-and-location">
+                  <div class="profile-header-name" dir="ltr">
+                    <span>Marco Lavielle</span>
+                  </div>
+                  <div class="profile-header-location">Bondi, AU</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content-container" style="height: auto;">
+          <div class="profile-page content-delayed-fade-in">
+            <form class="profile-amount-form">
+              <div class="profile-recipient-container">
+                <div class="recipient-label">Send Bitcoin to Marco.</div>
+              </div>
+              <div class="profile-amount-input-container">
+                <div class="money-input">
+                  <div class="amount-container" dir="ltr" style="font-size: 60px;">
+                    <div class="amount-currency">
+                      <span class="amount-currency-symbol">$</span>
+                    </div>
+                    <input type="text" placeholder="0.00" class="amount-number" data-ng-model="ammount" data-ng-change="bitcoinConversion()">
+                    <span class="amount-currency">AUD</span>
+                </div>
+              </div>
+              <div class="bitcoin-convertion">
+                  <span>
+                    <span data-ng-model="bitcoin" data-ng-change="bitcoinConversion()">{{bitcoin | currency:"":3}}</span><span> BTC</span>
+                  </span>
+                  <div class="fee-message">(excluding 1% fee)</div>
+                </div>
+              </div>
+              <input type="submit" class="profile-amount-submit-button pwc-button" value="Next" ng-click="sendBitcoin()">
+              <div class="profile-footnote"></div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,38 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <div class="wrapper">
+      <div class="page-box">
+        <section class="strip-container">
+          <div class="profile-header blue responsive transition">
+            <div class="gradient-animate-layer hidden"></div>
+            <div class="snow-container"></div>
+            <div class="profile-header-content">
+              <div class="profile-image-container">
+                <div class="profile-header-img current-profile-img" style="background-image: url(../assets/images/marco.jpg);"></div>
+              </div>
+          </div>
+        </section>
+        <section class="content-container" style="height: auto;">
+          <div class="profile-page content-delayed-fade-in">
+            <form class="profile-amount-form">
+              <div class="profile-recipient-container">
+                <div class="recipient-label">Congratulations!<br/>You have sent to Marco:</div>
+              </div>
+              <div class="profile-amount-input-container">
+                <div class="money-input">
+                  <div class="amount-container" dir="ltr" style="font-size: 60px;">
+                    <div class="amount-number" style="width: 117px; text-align: left;">{{bitcoin | currency:"":3}}</div><span class="amount-currency padding-currency">BTC</span>
+                  </div>
+                </div>
+              </div>
+              <input type="submit" class="profile-amount-submit-button pwc-button" value="Finish" ng-click="finish()">
+              <div class="profile-footnote"></div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>
