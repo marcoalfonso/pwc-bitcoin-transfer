@@ -21,7 +21,8 @@
     "passport-local": "~0.1.6",
     "passport-facebook": "latest",
     "composable-middleware": "^0.3.0",
-    "connect-mongo": "^0.8.1"
+    "connect-mongo": "^0.8.1",
+    "cors": "^2.7.1"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
